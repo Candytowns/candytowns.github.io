@@ -17,16 +17,16 @@ function calculateBMI() {
 
     if (bmi < 18.5) {
         category = 'Underweight';
-        color = '#3498db';
+        color = '#3b82f6';
     } else if (bmi < 25) {
         category = 'Normal';
-        color = '#2ecc71';
+        color = '#22c55e';
     } else if (bmi < 30) {
         category = 'Overweight';
-        color = '#f39c12';
+        color = '#f59e0b';
     } else {
         category = 'Obese';
-        color = '#e74c3c';
+        color = '#ef4444';
     }
 
     document.getElementById('bmi-number').textContent = 'BMI: ' + bmi;

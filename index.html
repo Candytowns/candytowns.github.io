@@ -9,7 +9,8 @@
 <body>
 
     <div class="header">
-        <h1>Candytowns</h1>
+        <h1><span class="icon">🏀</span> Candytowns</h1>
+        <p>Basketball Lover &amp; CS Student at Ritsumeikan University</p>
     </div>
 
     <nav class="navbar">
@@ -21,40 +22,53 @@
     <div class="main-container">
 
         <aside class="sidebar-left">
-            <h3>Useful Links</h3>
-            <ul>
-                <li><a href="https://www.ritsumei.ac.jp" target="_blank">Ritsumeikan University</a></li>
-                <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
-                <li><a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a></li>
-                <li><a href="https://www.nba.com" target="_blank">NBA Official</a></li>
-                <li><a href="https://github.com" target="_blank">GitHub</a></li>
-            </ul>
+            <div class="sidebar-card">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li><a href="https://www.ritsumei.ac.jp" target="_blank">Ritsumeikan Univ</a></li>
+                    <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
+                    <li><a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a></li>
+                    <li><a href="https://www.nba.com" target="_blank">NBA Official</a></li>
+                    <li><a href="https://github.com" target="_blank">GitHub</a></li>
+                </ul>
+            </div>
         </aside>
 
         <main class="content">
             <h2>About Me</h2>
-            <p>Hi, I'm Candytowns! I'm a student at Ritsumeikan University, studying Information Systems Engineering. I love exploring new technologies and building cool things with code.</p>
-            <p>Outside of studying, my biggest passion is basketball. I play basketball regularly with friends and love watching NBA games. My favorite thing is following the playoffs and watching incredible plays from the best players in the world.</p>
-            <p>I also enjoy learning about web development, which is what this website is all about. Thanks for visiting!</p>
-            <img src="photo.jpg" alt="My photo" width="600">
+            <p class="subtitle">Welcome to my personal website!</p>
+
+            <p>Hi there! I'm Candytowns, a student at Ritsumeikan University majoring in Information Systems Engineering. I'm passionate about technology, coding, and most importantly — basketball!</p>
+
+            <div class="highlight-box">
+                🏀 Basketball is not just a sport to me — it's a way of life. I play regularly, follow the NBA closely, and always enjoy a good pickup game with friends.
+            </div>
+
+            <p>When I'm not on the court, I'm usually studying web development, exploring new programming languages, or catching up on the latest NBA highlights. My dream is to combine my love for tech and sports in the future.</p>
+
+            <p>Thanks for stopping by my website. Feel free to check out my portfolio or try the BMI calculator on the Trivia page!</p>
+
+            <img src="photo.jpg" alt="Me playing basketball">
         </main>
 
         <aside class="sidebar-right">
-            <h3>Contact Me</h3>
-            <div class="contact-form">
-                <label>Name</label>
-                <input type="text" id="contact-name" placeholder="Your name">
-                <span class="form-error" id="name-error">Please enter your name</span>
+            <div class="sidebar-card">
+                <h3>Contact Me</h3>
+                <div class="contact-form">
+                    <label>Name</label>
+                    <input type="text" id="contact-name" placeholder="Your name">
+                    <span class="form-error" id="name-error">Please enter your name</span>
 
-                <label>Email</label>
-                <input type="email" id="contact-email" placeholder="Your email">
-                <span class="form-error" id="email-error">Please enter a valid email</span>
+                    <label>Email</label>
+                    <input type="email" id="contact-email" placeholder="Your email">
+                    <span class="form-error" id="email-error">Please enter a valid email</span>
 
-                <label>Message</label>
-                <textarea id="contact-message" placeholder="Your message"></textarea>
-                <span class="form-error" id="message-error">Please enter a message</span>
+                    <label>Message</label>
+                    <textarea id="contact-message" placeholder="Your message"></textarea>
+                    <span class="form-error" id="message-error">Please enter a message</span>
 
-                <button class="btn-send" onclick="validateForm()">Send</button>
+                    <button class="btn-send" onclick="validateForm()">Send</button>
+                </div>
             </div>
         </aside>
 
@@ -70,17 +84,13 @@
             var name = document.getElementById('contact-name').value.trim();
             var email = document.getElementById('contact-email').value.trim();
             var message = document.getElementById('contact-message').value.trim();
-
             document.getElementById('name-error').style.display = name === '' ? 'block' : 'none';
             if (name === '') valid = false;
-
             var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             document.getElementById('email-error').style.display = (!emailPattern.test(email)) ? 'block' : 'none';
             if (!emailPattern.test(email)) valid = false;
-
             document.getElementById('message-error').style.display = message === '' ? 'block' : 'none';
             if (message === '') valid = false;
-
             if (valid) {
                 alert('Thank you for your message!');
                 document.getElementById('contact-name').value = '';
@@ -89,6 +99,5 @@
             }
         }
     </script>
-
 </body>
 </html>

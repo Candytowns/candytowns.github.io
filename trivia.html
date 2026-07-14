@@ -9,7 +9,8 @@
 <body>
 
     <div class="header">
-        <h1>Candytowns</h1>
+        <h1><span class="icon">🏀</span> Candytowns</h1>
+        <p>Basketball Lover &amp; CS Student at Ritsumeikan University</p>
     </div>
 
     <nav class="navbar">
@@ -21,28 +22,32 @@
     <div class="main-container">
 
         <aside class="sidebar-left">
-            <h3>Useful Links</h3>
-            <ul>
-                <li><a href="https://www.ritsumei.ac.jp" target="_blank">Ritsumeikan University</a></li>
-                <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
-                <li><a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a></li>
-                <li><a href="https://www.nba.com" target="_blank">NBA Official</a></li>
-                <li><a href="https://github.com" target="_blank">GitHub</a></li>
-            </ul>
+            <div class="sidebar-card">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li><a href="https://www.ritsumei.ac.jp" target="_blank">Ritsumeikan Univ</a></li>
+                    <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
+                    <li><a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a></li>
+                    <li><a href="https://www.nba.com" target="_blank">NBA Official</a></li>
+                    <li><a href="https://github.com" target="_blank">GitHub</a></li>
+                </ul>
+            </div>
         </aside>
 
         <main class="content">
             <h2>BMI Calculator</h2>
-            <p>Enter your height and weight to calculate your Body Mass Index (BMI) and find out what category it falls into.</p>
+            <p class="subtitle">Check your Body Mass Index</p>
+
+            <p>Enter your height and weight to calculate your BMI and find out what category it falls into. Stay fit and keep balling! 🏀</p>
 
             <div class="trivia-section">
                 <label>Height (cm)</label>
-                <input type="number" id="height" placeholder="e.g. 170">
+                <input type="number" id="height" placeholder="e.g. 180">
 
                 <label>Weight (kg)</label>
-                <input type="number" id="weight" placeholder="e.g. 65">
+                <input type="number" id="weight" placeholder="e.g. 75">
 
-                <button onclick="calculateBMI()">Calculate BMI</button>
+                <button class="btn-calc" onclick="calculateBMI()">Calculate BMI</button>
 
                 <div class="bmi-result" id="bmi-result">
                     <div class="bmi-number" id="bmi-number"></div>
@@ -52,21 +57,23 @@
         </main>
 
         <aside class="sidebar-right">
-            <h3>Contact Me</h3>
-            <div class="contact-form">
-                <label>Name</label>
-                <input type="text" id="contact-name" placeholder="Your name">
-                <span class="form-error" id="name-error">Please enter your name</span>
+            <div class="sidebar-card">
+                <h3>Contact Me</h3>
+                <div class="contact-form">
+                    <label>Name</label>
+                    <input type="text" id="contact-name" placeholder="Your name">
+                    <span class="form-error" id="name-error">Please enter your name</span>
 
-                <label>Email</label>
-                <input type="email" id="contact-email" placeholder="Your email">
-                <span class="form-error" id="email-error">Please enter a valid email</span>
+                    <label>Email</label>
+                    <input type="email" id="contact-email" placeholder="Your email">
+                    <span class="form-error" id="email-error">Please enter a valid email</span>
 
-                <label>Message</label>
-                <textarea id="contact-message" placeholder="Your message"></textarea>
-                <span class="form-error" id="message-error">Please enter a message</span>
+                    <label>Message</label>
+                    <textarea id="contact-message" placeholder="Your message"></textarea>
+                    <span class="form-error" id="message-error">Please enter a message</span>
 
-                <button class="btn-send" onclick="validateForm()">Send</button>
+                    <button class="btn-send" onclick="validateForm()">Send</button>
+                </div>
             </div>
         </aside>
 
@@ -77,6 +84,5 @@
     </footer>
 
     <script src="script.js"></script>
-
 </body>
 </html>

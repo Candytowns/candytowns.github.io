@@ -9,7 +9,8 @@
 <body>
 
     <div class="header">
-        <h1>Candytowns</h1>
+        <h1><span class="icon">🏀</span> Candytowns</h1>
+        <p>Basketball Lover &amp; CS Student at Ritsumeikan University</p>
     </div>
 
     <nav class="navbar">
@@ -21,19 +22,21 @@
     <div class="main-container">
 
         <aside class="sidebar-left">
-            <h3>Useful Links</h3>
-            <ul>
-                <li><a href="https://www.ritsumei.ac.jp" target="_blank">Ritsumeikan University</a></li>
-                <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
-                <li><a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a></li>
-                <li><a href="https://www.nba.com" target="_blank">NBA Official</a></li>
-                <li><a href="https://github.com" target="_blank">GitHub</a></li>
-            </ul>
+            <div class="sidebar-card">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li><a href="https://www.ritsumei.ac.jp" target="_blank">Ritsumeikan Univ</a></li>
+                    <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
+                    <li><a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a></li>
+                    <li><a href="https://www.nba.com" target="_blank">NBA Official</a></li>
+                    <li><a href="https://github.com" target="_blank">GitHub</a></li>
+                </ul>
+            </div>
         </aside>
 
         <main class="content">
             <h2>My Portfolio</h2>
-            <p>Here are some of my projects and experiences so far:</p>
+            <p class="subtitle">Projects, experiences, and things I've been working on</p>
 
             <table class="portfolio-table">
                 <thead>
@@ -48,31 +51,31 @@
                     <tr>
                         <td>1</td>
                         <td>Personal Website</td>
-                        <td>Built a personal website using HTML, CSS, and JavaScript, hosted on GitHub Pages</td>
+                        <td>Designed and built this basketball-themed personal website using HTML, CSS, and JavaScript</td>
                         <td>Jul 2026</td>
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td>Basketball Stats Tracker</td>
-                        <td>Created a simple program to track basketball game scores and player stats</td>
+                        <td>NBA Stats Tracker</td>
+                        <td>Created a program to track NBA player stats and compare shooting percentages</td>
                         <td>May 2026</td>
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td>Python Calculator</td>
-                        <td>Developed a basic calculator application using Python as a class assignment</td>
+                        <td>Python Game Project</td>
+                        <td>Developed a simple basketball shooting game using Python and Pygame library</td>
                         <td>Mar 2026</td>
                     </tr>
                     <tr>
                         <td>4</td>
-                        <td>Database Project</td>
-                        <td>Designed and built a student database system using SQL for an information systems course</td>
+                        <td>Database System</td>
+                        <td>Built a student information database system using SQL for class assignment</td>
                         <td>Jan 2026</td>
                     </tr>
                     <tr>
                         <td>5</td>
-                        <td>Campus Basketball Tournament</td>
-                        <td>Organized and participated in the Ritsumeikan campus basketball tournament</td>
+                        <td>Campus Basketball League</td>
+                        <td>Organized and played in the Ritsumeikan campus 3-on-3 basketball tournament</td>
                         <td>Nov 2025</td>
                     </tr>
                 </tbody>
@@ -80,21 +83,23 @@
         </main>
 
         <aside class="sidebar-right">
-            <h3>Contact Me</h3>
-            <div class="contact-form">
-                <label>Name</label>
-                <input type="text" id="contact-name" placeholder="Your name">
-                <span class="form-error" id="name-error">Please enter your name</span>
+            <div class="sidebar-card">
+                <h3>Contact Me</h3>
+                <div class="contact-form">
+                    <label>Name</label>
+                    <input type="text" id="contact-name" placeholder="Your name">
+                    <span class="form-error" id="name-error">Please enter your name</span>
 
-                <label>Email</label>
-                <input type="email" id="contact-email" placeholder="Your email">
-                <span class="form-error" id="email-error">Please enter a valid email</span>
+                    <label>Email</label>
+                    <input type="email" id="contact-email" placeholder="Your email">
+                    <span class="form-error" id="email-error">Please enter a valid email</span>
 
-                <label>Message</label>
-                <textarea id="contact-message" placeholder="Your message"></textarea>
-                <span class="form-error" id="message-error">Please enter a message</span>
+                    <label>Message</label>
+                    <textarea id="contact-message" placeholder="Your message"></textarea>
+                    <span class="form-error" id="message-error">Please enter a message</span>
 
-                <button class="btn-send" onclick="validateForm()">Send</button>
+                    <button class="btn-send" onclick="validateForm()">Send</button>
+                </div>
             </div>
         </aside>
 
@@ -110,17 +115,13 @@
             var name = document.getElementById('contact-name').value.trim();
             var email = document.getElementById('contact-email').value.trim();
             var message = document.getElementById('contact-message').value.trim();
-
             document.getElementById('name-error').style.display = name === '' ? 'block' : 'none';
             if (name === '') valid = false;
-
             var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             document.getElementById('email-error').style.display = (!emailPattern.test(email)) ? 'block' : 'none';
             if (!emailPattern.test(email)) valid = false;
-
             document.getElementById('message-error').style.display = message === '' ? 'block' : 'none';
             if (message === '') valid = false;
-
             if (valid) {
                 alert('Thank you for your message!');
                 document.getElementById('contact-name').value = '';
@@ -129,6 +130,5 @@
             }
         }
     </script>
-
 </body>
 </html>
