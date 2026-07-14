@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Candytowns - Home</title>
+    <title>Candytowns - Trivia</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,9 +13,9 @@
     </div>
 
     <nav class="navbar">
-        <a href="index.html" class="active">HOME</a>
+        <a href="index.html">HOME</a>
         <a href="portfolio.html">PORTFOLIO</a>
-        <a href="trivia.html">TRIVIA</a>
+        <a href="trivia.html" class="active">TRIVIA</a>
     </nav>
 
     <div class="main-container">
@@ -32,11 +32,23 @@
         </aside>
 
         <main class="content">
-            <h2>About Me</h2>
-            <p>Hi, I'm Candytowns! I'm a student at Ritsumeikan University, studying Information Systems Engineering. I love exploring new technologies and building cool things with code.</p>
-            <p>Outside of studying, my biggest passion is basketball. I play basketball regularly with friends and love watching NBA games. My favorite thing is following the playoffs and watching incredible plays from the best players in the world.</p>
-            <p>I also enjoy learning about web development, which is what this website is all about. Thanks for visiting!</p>
-            <img src="photo.jpg" alt="My photo" width="600">
+            <h2>BMI Calculator</h2>
+            <p>Enter your height and weight to calculate your Body Mass Index (BMI) and find out what category it falls into.</p>
+
+            <div class="trivia-section">
+                <label>Height (cm)</label>
+                <input type="number" id="height" placeholder="e.g. 170">
+
+                <label>Weight (kg)</label>
+                <input type="number" id="weight" placeholder="e.g. 65">
+
+                <button onclick="calculateBMI()">Calculate BMI</button>
+
+                <div class="bmi-result" id="bmi-result">
+                    <div class="bmi-number" id="bmi-number"></div>
+                    <div class="bmi-category" id="bmi-category"></div>
+                </div>
+            </div>
         </main>
 
         <aside class="sidebar-right">
@@ -64,31 +76,7 @@
         <p>&copy; 2026 Candytowns | <a href="https://github.com/Candytowns" target="_blank">GitHub</a></p>
     </footer>
 
-    <script>
-        function validateForm() {
-            var valid = true;
-            var name = document.getElementById('contact-name').value.trim();
-            var email = document.getElementById('contact-email').value.trim();
-            var message = document.getElementById('contact-message').value.trim();
-
-            document.getElementById('name-error').style.display = name === '' ? 'block' : 'none';
-            if (name === '') valid = false;
-
-            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            document.getElementById('email-error').style.display = (!emailPattern.test(email)) ? 'block' : 'none';
-            if (!emailPattern.test(email)) valid = false;
-
-            document.getElementById('message-error').style.display = message === '' ? 'block' : 'none';
-            if (message === '') valid = false;
-
-            if (valid) {
-                alert('Thank you for your message!');
-                document.getElementById('contact-name').value = '';
-                document.getElementById('contact-email').value = '';
-                document.getElementById('contact-message').value = '';
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 
 </body>
 </html>
